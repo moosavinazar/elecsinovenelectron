@@ -1,0 +1,22 @@
+{
+  "name": "elecsinoven",
+  "version": "1.0.0",
+  "description": "elecsin oven application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build:win": "electron-packager . elecsinoven --platform win32 --asar --icon ./icons/logo.ico --out ./build",
+    "build:mac": "electron-packager . elecsinoven --platform darwin --asar --icon ./icons/logo.icns --out ./build",
+    "build:linux": "electron-packager . elecsinoven --platform linux --arch arm64 --asar --icon ./icons/logo.png --out ./build",
+    "build:all": "electron-packager . elecsinoven --platform all --asar --icon ./icons/logo --out ./build"
+  },
+  "author": "sar soft",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^20.0.0",
+    "electron-installer-debian": "^3.1.0"
+  },
+  "devDependencies": {
+    "electron-packager": "^15.5.1"
+  }
+}
